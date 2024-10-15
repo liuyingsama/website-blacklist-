@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    margin: 0 auto; /* 居中显示 */
+    border-collapse: collapse;
+    width: 100%; /* 表格宽度 */
+}
+
+th, td {
+    text-align: center; /* 单元格内容居中 */
+    border: 1px solid #ccc; /* 边框样式 */
+    padding: 10px; /* 内边距 */
+}
+
+th {
+    background-color: #f2f2f2; /* 表头背景色 */
+}
+
+.reason-input {
+    width: 100%; /* 输入框宽度 */
+    padding: 5px; /* 内边距 */
+    box-sizing: border-box; /* 确保内边距和边框包含在总宽度内 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 圆角边框 */
+}
+
+.star {
+    cursor: pointer;
+    font-size: 20px; /* 调整星星大小 */
+    color: gold; /* 星星颜色 */
+}
+
+.hidden-display-tag {
+    display: none; /* 隐藏这一列 */
+}

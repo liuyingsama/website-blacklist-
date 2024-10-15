@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>黑名单管理</title>
+    <link rel="stylesheet" href="blacklist.css"> <!-- 引入CSS样式 -->
+    <script src="blacklist.js" defer></script> <!-- 确保脚本在DOM加载后执行 -->
+</head>
+<body>
+    <h1 id="title">被拉黑的网站列表</h1>
+    <div>
+        <button id="removeSelectedButton">移除选中的网站</button>
+        <button id="exportButton">导出选中网站的黑名单</button>
+        <button id="importButton">导入黑名单</button>
+        <button id="customizeButton">自定义</button> <!-- 自定义按钮 -->
+    </div>
+    <div id="customizeSection" style="display: none;">
+        <h2 id="customizeTitle">自定义提示标签</h2>
+        <table id="customizeTable">
+            <thead>
+                <tr>
+                    <th id="hateLevelHeader">厌恶程度</th>
+                    <th id="oneStar">一星</th>
+                    <th id="twoStar">二星</th>
+                    <th id="threeStar">三星</th>
+                    <th id="fourStar">四星</th>
+                    <th id="fiveStar">五星</th>
+                    <th id="action">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span id="customLabel">自选标签</span></td>
+                    <td><input type="text" id="star1" value="雷"></td>
+                    <td><input type="text" id="star2" value="大雷"></td>
+                    <td><input type="text" id="star3" value="巨大雷"></td>
+                    <td><input type="text" id="star4" value="超巨大雷"></td>
+                    <td><input type="text" id="star5" value="超级无敌宇宙大雷"></td>
+                    <td><button id="confirmButton">确认</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <table id="blacklistTable" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAllCheckbox"></th>
+                <th id="websiteName">网站名称</th>
+                <th id="domain">域名</th>
+                <th id="hateLevel">厌恶程度</th>
+                <th id="blacklistReason">拉黑原因</th>
+                <th id="showReason">是否显示拉黑原因</th> <!-- 新增表头 -->
+            </tr>
+        </thead>
+        <tbody id="blacklist">
+            <!-- ... existing code ... -->
+            <td class="show-reason"><input type="checkbox" class="reason-checkbox" data-index="${index}" ${item.showReason ? 'checked' : ''}></td> <!-- 新增单元格 -->
+            <!-- ... existing code ... -->
+        </tbody>
+    </table>
+</body>
+</html>

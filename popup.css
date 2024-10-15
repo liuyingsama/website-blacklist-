@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.panel {
+    max-width: 500px; /* 增加宽度 */
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* 水平排列按钮 */
+}
+
+button {
+    padding: 10px 20px; /* 增加按钮的内边距 */
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex: 1; /* 使按钮均匀分布 */
+    margin: 0 5px; /* 按钮之间的间隙 */
+    height: 50px; /* 设置按钮高度 */
+    font-size: 16px; /* 设置字体大小 */
+    box-sizing: border-box; /* 确保内边距和边框包含在总宽度内 */
+    white-space: nowrap; /* 防止文字换行 */
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
